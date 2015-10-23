@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  acordaoID: MyString
+  relator: MyString
+  ementa: MyString
+  decisao: MyString
+  local: MyString
+
+two:
+  acordaoID: MyString
+  relator: MyString
+  ementa: MyString
+  decisao: MyString
+  local: MyString

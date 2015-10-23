@@ -1,0 +1,5 @@
+
+acordaos show js
+puts "olaaaaaaaaaaAAAAAAAA"
+console.log("iaksdasda")
+page.replace_html('acordaos' , render(@acordao))

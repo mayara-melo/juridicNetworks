@@ -1,0 +1,28 @@
+<p>Busque por uma jurisprudência</p>
+
+<%= form_for :acordao, url: acordao_show_path(@acordao), html: { method: :get,class: 'form-horizontal', id:"form1"}, remote: true do |f| %>
+  Acordao id: <%= f.text_field :acordaoId %><br />
+  Relator : <%= f.text_field :relator %><br />
+  <%= f.submit %>
+<% end %>
+
+<div id='graph'>
+    <p id='graphTitle'> Title</p>
+    <h1> Area graph</h1>
+</div>
+
+<div id="acordaos">
+</div>
+
+<% content_for :js do %>
+    $('#form1').bind('ajax:success', function(a,data,b,c){
+        acordao = data.acordao
+        id = acordao.acordaoId
+        relator = acordao.relator
+        $('#graphTitle').replaceWith( id);
+        $('#acordao_acordaoId').val("");
+    }).bind('ajax:error', function( data,e, a){
+        console.log(a)
+        console.log("errorrrr");
+    })
+<% end %>
